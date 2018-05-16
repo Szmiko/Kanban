@@ -12,7 +12,7 @@ function Column(id, name) {
 		var columnDelete = $('<button class="btn-delete col-md-1">x</button>');
 		var columnAddCard = $('<button class="column-add-card col-md-2">Dodaj kartę</button>');
 		
-		columnDelete.click(function() {
+		columnDelete.on('click', function() {
 			self.deleteColumn();
 		});
 		
