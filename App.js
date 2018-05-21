@@ -30,14 +30,13 @@ function setupCards(col, cards) {
 		col.createCard(card0bj);
 	});
 };
-//?
 
 function createCard() {
 	var card = $('<li class="card"></li>');
 	var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 	var cardDescription = $('<p class="card-description"></p>');
 		
-	cardDeleteBtn.click(function(){
+	cardDeleteBtn.on('click', function(){
 		self.removeCard();
 	});
 		

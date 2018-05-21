@@ -7,7 +7,7 @@ var board = {
 	element: $('#board .column-container')
 };
 
-$('.create-column').click(function(){
+$('.create-column').on('click', function(){
 	var columnName = prompt('Wpisz nazwę kolumny');
 	$.ajax({
 		url: baseUrl + '/column',

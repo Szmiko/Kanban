@@ -12,15 +12,15 @@ function Column(id, name) {
 		var columnDelete = $('<button class="btn-delete col-md-1">x</button>');
 		var columnAddCard = $('<button class="column-add-card col-md-2">Dodaj kartę</button>');
 		
-		columnDelete.click(function() {
+		columnDelete.on('click', function() {
 			self.deleteColumn();
 		});
 		
-		columnAddCard.click(function(event) {
+		columnAddCard.on('click', function(event) {
 			var cardName = prompt("Wpisz nazwę karty");
 			event.preventDefault();
 			$.ajax({
-				url: baseurl + '/card',
+				url: baseUrl + '/card',
 				method: 'POST',
 				data: {
 					name: cardName,
@@ -38,8 +38,8 @@ function Column(id, name) {
 			.append(columnAddCard)
 			.append(columnCardList);
 			return column;
-		};
 	};
+};
 
 Column.prototype = {
 	createCard: function(card) {

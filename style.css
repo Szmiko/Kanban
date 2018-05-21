@@ -1,9 +1,14 @@
 .board {
 	width: 100%;
+	height: 100vh;
 	text-align: center;
 	background: lightblue;
 }
 
 .card-placeholder {
 	background: red;
+}
+
+.card-list {
+	height: 40px;
 }
